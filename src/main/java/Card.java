@@ -4,6 +4,7 @@
 public class Card implements Comparable<Card> {
     int val;
     int color;
+    private int weight;
     static final int black = 1;
     static final int red = 2;
     static final int flower = 3;
@@ -16,6 +17,10 @@ public class Card implements Comparable<Card> {
 
     int getVal() {
         return val;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     @Override

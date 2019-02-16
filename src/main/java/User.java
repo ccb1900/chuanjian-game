@@ -34,8 +34,8 @@ public class User {
         this.cardList.add(card);
     }
 
-    void removeCard(int val,int color) {
-        this.cardList.remove(new Card(val, color));
+    void removeCard(Card card) {
+        this.cardList.remove(card);
     }
     public void setCardList(ArrayList<Card> cardList) {
         this.cardList = cardList;

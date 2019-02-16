@@ -1,14 +1,17 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
  * @author ccb
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         start();
     }
 
-    private static void start() {
+    private static void start() throws Exception {
         Room room = new Room();
 
         User c1 = new User("ccb1",1);
@@ -31,8 +34,68 @@ public class Main {
 
         int current = room.getStart();
 
+        while (true) {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("please input number: ");
+            int number = Integer.parseInt(bufferedReader.readLine());
 
-        room.getUser(current).removeCard(1,1);
+            if (number != current) {
+                continue;
+            }
+            bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("please input card list: (use space to seq)");
+
+            String cardString = bufferedReader.readLine();
+
+            if (cardString.equals("s")) {
+                System.out.println(number + "没有出牌，跳过");
+                continue;
+            }
+            String[] cardSplit = cardString.split(" ");
+
+            ArrayList<Card> cardArrayList1 = new ArrayList<>(cardSplit.length);
+            for (int i = 0; i < cardSplit.length; i++) {
+                String[] card = cardSplit[i].split("\\*");
+                cardArrayList1.add(new Card(Integer.parseInt(card[0]), Integer.parseInt(card[1])));
+            }
+            Rule userRule;
+            switch (cardArrayList1.size()) {
+                case 1:
+                    userRule = new One(cardArrayList1);
+                    break;
+                case 2:
+                    userRule = new Couples();
+                    break;
+                case 3:
+                    userRule = new Three();
+                    userRule = new Small();
+                    userRule = new Big();
+                    userRule = new King();
+                    break;
+                case 4:
+                    userRule = new Shun();
+                    userRule = new Bomb(cardArrayList1);
+                    break;
+                default:
+                    throw new Exception("");
+
+            }
+            if (room.getCurrent() == null) {
+                room.setCurrent(userRule);
+            } else {
+                Rule currentRule = room.getCurrent();
+
+                if (currentRule.getType() == 1) {
+//                    if (currentRule.compare(userRule)) {
+//                        for (Card card : cardArrayList1) {
+//                            room.getUser(current).removeCard(card);
+//                        }
+//                    }
+                }
+
+                room.setCurrent(userRule);
+            }
+        }
     }
 
     /**
@@ -42,7 +105,7 @@ public class Main {
      * @param c
      * @return
      */
-    static boolean small(Card a,Card b,Card c) {
+    static boolean small(Card a, Card b, Card c) {
         return a.equals(b) && b.equals(c) && a.getVal()==6;
     }
 
@@ -53,7 +116,7 @@ public class Main {
      * @param c
      * @return
      */
-    static boolean chuanjian(Card a,Card b,Card c) {
+    static boolean chuanjian(Card a, Card b, Card c) {
         return a.getVal()==1 && b.equals(c) && b.getVal()==4;
     }
 
