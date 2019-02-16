@@ -3,7 +3,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Room {
+/**
+ * @author ccb
+ */
+class Room {
     private String no;
     private String id;
     private HashMap<Integer,User> userMap = new HashMap<>();
@@ -28,10 +31,10 @@ public class Room {
 
     void dispatch(ArrayList<Card> cardArrayList) {
         for (int i = 0; i < 13; i++) {
-            dispatchCard(cardArrayList.get(4*i),i,1);
-            dispatchCard(cardArrayList.get(4*i+1),i,2);
-            dispatchCard(cardArrayList.get(4*i+2),i,3);
-            dispatchCard(cardArrayList.get(4*i+3),i,4);
+            dispatchCard(cardArrayList.get(4 * i), 1);
+            dispatchCard(cardArrayList.get(4 * i + 1), 2);
+            dispatchCard(cardArrayList.get(4 * i + 2), 3);
+            dispatchCard(cardArrayList.get(4 * i + 3), 4);
         }
 
         Collections.sort(userMap.get(1).getCardList());
@@ -49,12 +52,12 @@ public class Room {
         return userMap.get(index);
     }
 
-    private void dispatchCard(Card card, int i, int user_index) {
+    private void dispatchCard(Card card, int userIndex) {
         if (card.val == 4 && card.color == 2) {
-            start = user_index;
+            start = userIndex;
         }
 
-        userMap.get(user_index).scratch(card);
+        userMap.get(userIndex).scratch(card);
     }
     void start() {
 

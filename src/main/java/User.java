@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author ccb
+ */
 public class User {
     int id;
     String name;

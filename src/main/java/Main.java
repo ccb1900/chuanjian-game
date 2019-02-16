@@ -1,9 +1,13 @@
 import java.util.ArrayList;
 
+/**
+ * @author ccb
+ */
 public class Main {
     public static void main(String[] args) {
         start();
     }
+
     private static void start() {
         Room room = new Room();
 
