@@ -1,3 +1,5 @@
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
 public class Small implements Rule {
     @Override
     public boolean check() {

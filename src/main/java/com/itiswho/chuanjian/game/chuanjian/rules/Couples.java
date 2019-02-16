@@ -1,4 +1,6 @@
-public class Shun implements Rule {
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
+public class Couples implements Rule {
     @Override
     public boolean check() {
         return false;

@@ -1,9 +1,13 @@
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
+import com.itiswho.chuanjian.game.chuanjian.Card;
+
 import java.util.ArrayList;
 
 public class Bomb implements Rule {
     ArrayList<Card> cards;
 
-    Bomb(ArrayList<Card> cardArrayList) {
+    public Bomb(ArrayList<Card> cardArrayList) {
         this.cards = cardArrayList;
     }
 

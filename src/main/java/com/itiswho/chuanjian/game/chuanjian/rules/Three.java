@@ -1,3 +1,5 @@
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
 public class Three implements Rule {
     @Override
     public boolean check() {

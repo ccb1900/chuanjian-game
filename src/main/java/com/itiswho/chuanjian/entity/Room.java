@@ -1,12 +1,16 @@
+package com.itiswho.chuanjian.entity;
+
+import com.itiswho.chuanjian.game.chuanjian.Card;
+import com.itiswho.chuanjian.game.chuanjian.rules.Rule;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author ccb
  */
-class Room {
+public class Room {
     private String no;
     private String id;
     private HashMap<Integer,User> userMap = new HashMap<>();
@@ -14,12 +18,13 @@ class Room {
     private int start;
     private int turns;
     private Rule current;
-    void add(int pos, User user) {
+
+    public void add(int pos, User user) {
         user.setRoom(this);
         userMap.put(pos,user);
     }
 
-    ArrayList<Card> shuffle() {
+    public ArrayList<Card> shuffle() {
         ArrayList<Card> cardList = new ArrayList<>(52);
         for (int i = 1; i < 5; i++) {
             for (int j = 1; j < 14; j++) {
@@ -36,7 +41,7 @@ class Room {
         return cardList;
     }
 
-    void dispatch(ArrayList<Card> cardArrayList) {
+    public void dispatch(ArrayList<Card> cardArrayList) {
         for (int i = 0; i < 13; i++) {
             dispatchCard(cardArrayList.get(4 * i), 1);
             dispatchCard(cardArrayList.get(4 * i + 1), 2);
@@ -68,7 +73,7 @@ class Room {
     }
 
     private void dispatchCard(Card card, int userIndex) {
-        if (card.val == 4 && card.color == 2) {
+        if (card.getVal() == 4 && card.getColor() == 2) {
             start = userIndex;
             turns = userIndex;
         }

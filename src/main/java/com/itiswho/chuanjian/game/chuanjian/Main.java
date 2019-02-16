@@ -1,5 +1,10 @@
+package com.itiswho.chuanjian.game.chuanjian;
+
+import com.itiswho.chuanjian.entity.Room;
+import com.itiswho.chuanjian.entity.User;
+import com.itiswho.chuanjian.game.chuanjian.rules.*;
+
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -87,7 +92,7 @@ public class Main {
 
                 if (currentRule.getType() == 1) {
 //                    if (currentRule.compare(userRule)) {
-//                        for (Card card : cardArrayList1) {
+//                        for (com.itiswho.chuanjian.game.chuanjian.Card card : cardArrayList1) {
 //                            room.getUser(current).removeCard(card);
 //                        }
 //                    }

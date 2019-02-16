@@ -1,3 +1,5 @@
+package com.itiswho.chuanjian.game.chuanjian;
+
 /**
  * @author ccb
  */
@@ -10,13 +12,17 @@ public class Card implements Comparable<Card> {
     static final int flower = 3;
     static final int slice = 4;
 
-    Card(int val, int color){
+    public Card(int val, int color) {
         this.val = val;
         this.color = color;
     }
 
-    int getVal() {
+    public int getVal() {
         return val;
+    }
+
+    public int getColor() {
+        return color;
     }
 
     public void setWeight(int weight) {

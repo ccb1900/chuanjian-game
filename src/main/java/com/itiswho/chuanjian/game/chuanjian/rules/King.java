@@ -1,4 +1,6 @@
-public class Big implements Rule {
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
+public class King implements Rule {
     @Override
     public boolean check() {
         return false;
@@ -11,6 +13,6 @@ public class Big implements Rule {
 
     @Override
     public int getType() {
-        return 1;
+        return 0;
     }
 }

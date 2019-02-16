@@ -1,4 +1,6 @@
-public class King implements Rule {
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
+public class Shun implements Rule {
     @Override
     public boolean check() {
         return false;

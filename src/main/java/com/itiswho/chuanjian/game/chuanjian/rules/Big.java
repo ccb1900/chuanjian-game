@@ -1,4 +1,6 @@
-public class Couples implements Rule {
+package com.itiswho.chuanjian.game.chuanjian.rules;
+
+public class Big implements Rule {
     @Override
     public boolean check() {
         return false;
@@ -11,6 +13,6 @@ public class Couples implements Rule {
 
     @Override
     public int getType() {
-        return 0;
+        return 1;
     }
 }
