@@ -3,18 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>chuanjian-game</artifactId>
-        <groupId>groupId</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.itiswho.ccb</groupId>
+        <artifactId>cg</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Common</artifactId>
     <dependencies>
         <dependency>
-            <groupId>groupId</groupId>
-            <artifactId>GameServer</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.itiswho.ccb</groupId>
+            <artifactId>GServer</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

@@ -1,6 +1,6 @@
 package com.itiswho.ccb;
 
-public class GameServer {
+public class GServer {
     /**
      * @param args
      * @throws Exception
