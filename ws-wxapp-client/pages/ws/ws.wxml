@@ -1,0 +1,12 @@
+<!--pages/ws/ws.wxml-->
+<view class='container'>
+<view>
+<button type='primary'>连接</button>
+</view>
+</view>
+<button type='primary' bindtap='open1'>连接</button>
+<button type='primary' bindtap='open2'>连接2</button>
+<button type='primary' bindtap='close1'>关闭1</button>
+<button type='primary' bindtap='close2'>关闭2</button>
+<button type='primary' bindtap='send1'>发送消息</button>
+<button type='primary' bindtap='send2'>发送消息2</button>
