@@ -19,6 +19,11 @@ public class Room {
     private int turns;
     private Rule current;
 
+    public Room(String no, String id) {
+        this.no = no;
+        this.id = id;
+    }
+
     public void add(int pos, User user) {
         user.setRoom(this);
         userMap.put(pos,user);
@@ -95,5 +100,31 @@ public class Room {
 
     void end() {
 
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

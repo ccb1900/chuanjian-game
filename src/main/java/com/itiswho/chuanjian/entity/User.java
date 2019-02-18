@@ -50,4 +50,10 @@ public class User {
     boolean victory() {
         return this.cardList.isEmpty();
     }
+
+    public void broadcast() {
+
+    }
+
+
 }

@@ -6,7 +6,13 @@
 
     <groupId>groupId</groupId>
     <artifactId>chuanjian-game</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>GameServer</module>
+        <module>HttpServer</module>
+        <module>HttpServer</module>
+    </modules>
     <build>
         <plugins>
             <plugin>

@@ -17,7 +17,7 @@ public class Main {
     }
 
     private static void start() throws Exception {
-        Room room = new Room();
+        Room room = new Room("1", "1");
 
         User c1 = new User("ccb1",1);
         User c2 = new User("ccb2",2);
