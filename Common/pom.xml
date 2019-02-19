@@ -12,12 +12,6 @@
     <artifactId>Common</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.itiswho.ccb</groupId>
-            <artifactId>GServer</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.0</version>

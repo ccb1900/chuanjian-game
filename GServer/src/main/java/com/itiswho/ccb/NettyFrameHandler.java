@@ -1,17 +1,12 @@
 package com.itiswho.ccb;
 
-import com.google.gson.Gson;
 import com.itiswho.ccb.entity.Room;
-import com.itiswho.ccb.entity.SingleMessage;
-import com.itiswho.ccb.entity.MsgType;
 import com.itiswho.ccb.entity.User;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
-import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;
-import io.netty.util.concurrent.GlobalEventExecutor;
 
 import java.util.Locale;
 import java.util.Map;
@@ -30,25 +25,7 @@ public class NettyFrameHandler extends SimpleChannelInboundHandler<WebSocketFram
         if (webSocketFrame instanceof TextWebSocketFrame) {
             String request = ((TextWebSocketFrame) webSocketFrame).text();
             System.out.println(request);
-            Gson gson = new Gson();
-            MsgType msgType = gson.newBuilder().serializeNulls().create().fromJson(request, MsgType.class);
-
-            switch (msgType.getType()) {
-                case "msg":
-                    SingleMessage message = msgType.getContent();
-                    user = new User("cc" + message.getFromUserId(), message.getFromUserId());
-                    if (!channelGroupMap.containsKey(message.getRoomId())) {
-                        Room room = new Room("1", "1");
-                        roomMap.put("1", room);
-                        channelGroupMap.put(room.getId(), new DefaultChannelGroup(GlobalEventExecutor.INSTANCE));
-                    }
-                    user.setRoom(new Room("1", "1"));
-                    channelHandlerContext.channel().writeAndFlush(new TextWebSocketFrame(message.getContent().toUpperCase(Locale.US)));
-                    break;
-                default:
-                    String messages = "unsupported format";
-                    throw new UnsupportedOperationException(messages);
-            }
+            channelHandlerContext.channel().writeAndFlush(new TextWebSocketFrame("hello".toUpperCase(Locale.US)));
         } else {
             String message = "unsupported frame";
             throw new UnsupportedOperationException(message);

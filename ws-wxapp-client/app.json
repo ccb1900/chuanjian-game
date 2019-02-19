@@ -1,8 +1,6 @@
 {
   "pages": [
-    "pages/ws/ws",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/ws/ws"
   ],
   "window": {
     "backgroundTextStyle": "light",

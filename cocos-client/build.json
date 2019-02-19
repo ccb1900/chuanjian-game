@@ -1,0 +1,11 @@
+{
+  "platform": "wechatgame",
+  "debug": true,
+  "md5Cache": true,
+  "wechatgame": {
+    "REMOTE_SERVER_ROOT": "http://192.168.8.140:8009",
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "landscape",
+    "subContext": ""
+  }
+}
