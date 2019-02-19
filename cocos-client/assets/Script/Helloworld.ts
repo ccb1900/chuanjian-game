@@ -15,6 +15,10 @@ export default class Helloworld extends cc.Component {
     socketOpen: boolean;
     ws: WebSocket;
 
+    constructor() {
+        super()
+        this.wsOpen()
+    }
     start() {
         // init logic
         this.label.string = this.text;

@@ -1,1 +1,0 @@
-C:/CocosCreator/CocosCreator.exe --path . --logfile web/log/build.log --build "configPath=build.json" && rm -rf web/res &&mv build/wechatgame/res web/

@@ -3,8 +3,8 @@
   "debug": true,
   "md5Cache": true,
   "wechatgame": {
-    "REMOTE_SERVER_ROOT": "http://192.168.8.140:8009",
-    "appid": "wx6ac3f5090a6b99c5",
+    "REMOTE_SERVER_ROOT": "http://101.132.74.191:9006",
+    "appid": "wxeed87eefedd5c059",
     "orientation": "landscape",
     "subContext": ""
   }
