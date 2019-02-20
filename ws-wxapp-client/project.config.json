@@ -5,7 +5,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.0",
-	"projectname": "ws",
+	"projectname": "%E6%98%AF%E6%98%AF%E6%98%AF",
 	"scripts": {
 		"beforeCompile": "npm run compile",
 		"beforePreview": "npm run compile",

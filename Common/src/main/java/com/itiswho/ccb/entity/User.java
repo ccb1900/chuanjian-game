@@ -1,6 +1,6 @@
 package com.itiswho.ccb.entity;
 
-import com.itiswho.ccb.Card;
+import com.itiswho.ccb.rules.Card;
 
 import java.util.ArrayList;
 

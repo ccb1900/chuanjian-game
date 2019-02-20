@@ -1,7 +1,5 @@
 package com.itiswho.ccb.rules;
 
-import com.itiswho.ccb.Card;
-
 import java.util.ArrayList;
 
 public class One implements Rule {

@@ -1,0 +1,1 @@
+protoc --java_out=./Common/src/main/java proto/test.proto proto/addressbook.proto

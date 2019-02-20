@@ -1,5 +1,6 @@
-package com.itiswho.ccb;
+package com.itiswho.ccb.server;
 
+import com.itiswho.ccb.rules.Card;
 import com.itiswho.ccb.entity.Room;
 import com.itiswho.ccb.entity.User;
 import com.itiswho.ccb.rules.*;
@@ -13,7 +14,9 @@ import java.util.ArrayList;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        start();
+//        start();
+//        Server.start();
+        System.out.println("sadad");
     }
 
     private static void start() throws Exception {
@@ -92,7 +95,7 @@ public class Main {
 
                 if (currentRule.getType() == 1) {
 //                    if (currentRule.compare(userRule)) {
-//                        for (com.itiswho.ccb.Card card : cardArrayList1) {
+//                        for (com.itiswho.ccb.rules.Card card : cardArrayList1) {
 //                            room.getUser(current).removeCard(card);
 //                        }
 //                    }

@@ -1,4 +1,4 @@
-package com.itiswho.ccb;
+package com.itiswho.ccb.server;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
