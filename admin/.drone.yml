@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+steps:
+- name: backend
+  image: composer
+  commands:
+  - compsoer -v
+  - composer config -g repos.packagist composer https://php.cnpkg.org
+  - composer update
