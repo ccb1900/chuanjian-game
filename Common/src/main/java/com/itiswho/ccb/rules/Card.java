@@ -1,4 +1,4 @@
-package com.itiswho.ccb;
+package com.itiswho.ccb.rules;
 
 /**
  * @author ccb
@@ -39,7 +39,7 @@ public class Card implements Comparable<Card> {
         return  val+"*"+color;
     }
 
-    boolean equals(Card obj) {
+    public boolean equals(Card obj) {
         return Boolean.getBoolean(Integer.toString(Integer.compare(this.val,obj.val)));
     }
 }

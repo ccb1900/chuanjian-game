@@ -49,7 +49,7 @@ export default class Helloworld extends cc.Component {
     wsSend() {
         this.socketWrap(() => {
             this.ws.send(JSON.stringify({
-                data: "demo"
+                data: "com.itiswho.ccb.proto.demo"
             }))
         })
     }

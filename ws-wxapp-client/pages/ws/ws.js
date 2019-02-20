@@ -26,6 +26,8 @@ Page({
       socketTask.onOpen((header) => {
         socketTask.onMessage((data) => {
           console.log(data)
+          // const dataView = new DataView(data.data);
+          // console.log(dataView)
           wx.showToast({
             title: i + 'send success',
           })

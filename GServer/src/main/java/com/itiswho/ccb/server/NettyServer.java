@@ -1,4 +1,4 @@
-package com.itiswho.ccb;
+package com.itiswho.ccb.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;

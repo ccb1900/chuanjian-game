@@ -1,4 +1,4 @@
-package com.itiswho.ccb;
+package com.itiswho.ccb.server;
 
 public class GServer {
     /**

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+// 姓名
+message info {
+	int32 age = 1;
+	string surname = 2;
+	string name = 3;
+}
+
+// 地址
+message address {
+	string province = 1;
+	string city = 2;
+	string downtown = 3;
+}
+
+// 联系方式
+message contact {
+	repeated string phone = 1;
+	string email = 2;
+}
+
+message user {
+	info userInfo = 1;
+	address userAddress = 2;
+	contact userContact = 3;
+}
